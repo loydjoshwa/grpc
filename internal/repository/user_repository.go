@@ -31,7 +31,7 @@ func (r *UserRepository) GetAll() ([]model.User,error){
 	return users,nil
 }
 
-func (r *UserRepository) GetById(id uint) (*model.User,error){
+func (r *UserRepository) GetByID(id uint) (*model.User,error){
 	var user model.User
 
 	err:=r.db.First(&user,id).Error
